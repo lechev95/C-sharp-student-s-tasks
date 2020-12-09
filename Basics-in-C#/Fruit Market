@@ -1,0 +1,29 @@
+using System;
+
+namespace FruitMarket
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double strawberryPrice = double.Parse(Console.ReadLine());
+            double bananaQuantity = double.Parse(Console.ReadLine());
+            double orangeQuantity = double.Parse(Console.ReadLine());
+            double berryQuantity = double.Parse(Console.ReadLine());
+            double strawberryQuantity = double.Parse(Console.ReadLine());
+
+            double berryPrice = strawberryPrice * 0.5;
+            double orangePrice = berryPrice - berryPrice * 0.4;
+            double bananaPrice = berryPrice - berryPrice * 0.8;
+
+            double totalStrawberry = strawberryPrice * strawberryQuantity;
+            double totalBanana = bananaPrice * bananaQuantity;
+            double totalOrange = orangePrice * orangeQuantity;
+            double totalBerry = berryPrice * berryQuantity;
+            double totalSum = totalBanana + totalBerry + totalOrange + totalStrawberry;
+
+            Console.WriteLine($"{totalSum:f2}");
+
+        }
+    }
+}
