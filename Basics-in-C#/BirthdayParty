@@ -1,0 +1,17 @@
+using System;
+
+namespace BithdayParty
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double rent = int.Parse(Console.ReadLine());
+            double cake = rent/5;
+            double drinks = cake - cake * 0.45;
+            double animator = rent / 3;
+            double total = rent + cake + drinks + animator;
+            Console.WriteLine(total);
+        }
+    }
+}
