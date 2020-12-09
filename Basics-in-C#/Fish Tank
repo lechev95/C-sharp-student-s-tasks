@@ -1,0 +1,23 @@
+using System;
+
+namespace FishTank
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int daljCm = int.Parse(Console.ReadLine());
+            int shirCm = int.Parse(Console.ReadLine());
+            int visCm = int.Parse(Console.ReadLine());
+            double proc = double.Parse(Console.ReadLine());
+
+            int obemCm = daljCm * shirCm * visCm;
+            double totalLitres = obemCm * 0.001;
+            double convProc = proc * 0.01;
+            double litresNeeded = totalLitres * (1 - convProc);
+
+            Console.WriteLine(litresNeeded);
+
+        }
+    }
+}
