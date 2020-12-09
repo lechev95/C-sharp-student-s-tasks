@@ -1,0 +1,18 @@
+using System;
+
+namespace DepositCalc
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            double deposit = double.Parse(Console.ReadLine());
+            int period = int.Parse(Console.ReadLine());
+            double annualPercent = double.Parse(Console.ReadLine());
+
+            double sum = deposit + period * ((deposit * annualPercent/100) / 12);
+
+            Console.WriteLine($"{sum:f2}");
+        }
+    }
+}
